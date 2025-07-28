@@ -3,12 +3,13 @@ frontend:
   phases:
     preBuild:
       commands:
-        - nvm install 20
-        - nvm use 20
+        - echo "🛠 Using Node version:"
+        - echo "🛠 Installing dependencies..."
         - node -v
         - npm ci
     build:
       commands:
+        - echo "🏗 Running build..."
         - npm run build
   artifacts:
     baseDirectory: dist
